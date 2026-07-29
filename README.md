@@ -10,6 +10,7 @@ This program enables manual modification of any digit(s) displayed while using a
 0.0.0.0·           --->           0.0.0.1·           --->              0·0.0.1.           --->             9·0.0.1.                     
           Moving joystick upward            Moving joystick rightward            Moving joystick downward
 ```
+After testing with a 5161AS 7-Segment Display (1-Digit 7-Segment Display) this program still works as intended, and thereby, theoretically works with any number of digits 7-Segment Display (as long as the pins physically and in the program are set up right)
 ### Wiring Diagram
 ![Screenshot of wiring physically done](images/Wiring_Diagram-Joystick_4_Digit_Segment_Display.png)
 ### Credit
