@@ -5,6 +5,10 @@
 + Pushing the joystick either upward or downward long enough speeds up the change in the number displayed (default change is every 1/2 second, but after 3 increments/decrements change is every 1/4 second)
 + Pushing the button of the joystick resets the numbers displayed to 0000
 ### Functionality
-This program enables manual modification of any digit(s) displayed while using a decimal point on the display as a pointer of the digit to be modified
+This program enables manual modification of any digit(s) displayed while using a decimal point on the display as a pointer of the digit to be modified. See below (· represents the current digit selected)
+```
+0.0.0.0·           --->           0.0.0.1·           --->              0·0.0.1.           --->             9·0.0.1.                     
+          Moving joystick upward            Moving joystick rightward            Moving joystick downward
+```
 ### Credit
 The [SevSeg](https://github.com/untr0py/SevSeg) library by Dean Reading
