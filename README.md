@@ -13,4 +13,5 @@ This program enables manual modification of any digit(s) displayed while using a
 ### Wiring Diagram
 ![Screenshot of wiring physically done](images/Wiring_Diagram-Joystick_4_Digit_Segment_Display.png)
 ### Credit
-The [SevSeg](https://github.com/untr0py/SevSeg) library by Dean Reading
++ Instructed the wiring and the basics of a Joystick Module: [Video](https://www.youtube.com/watch?v=9z5FsTzYWE4)
++ The [SevSeg](https://github.com/untr0py/SevSeg) library by Dean Reading
