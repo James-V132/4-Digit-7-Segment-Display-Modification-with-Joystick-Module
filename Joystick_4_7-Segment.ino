@@ -3,6 +3,7 @@ SevSeg sevseg;
 
 int num = 0;
 int DP = 0;
+int digit_pin_count = 0;
 // Relate to the display 
 
 int x = A0;
@@ -29,9 +30,10 @@ int min_steady_x = 700;
 void setup() {
   Serial.begin(9600);
 
-  byte numDigits = 4;
-  byte digitPins[] = {9, 10, 11, 12};
-  byte segmentPins[] = {1, 2, 3, 4, 5, 6, 7, 8};
+  byte numDigits = 4; // CHANGE TO THE NUMBER OF DIGITS IN DISPLAY
+  byte digitPins[] = {9, 10, 11, 12}; // CHANGE TO ARDUINO PINS USED FOR THE DIGIT PINS GOING FROM 1-...
+  digit_pin_count = sizeof(digitPins);
+  byte segmentPins[] = {1, 2, 3, 4, 5, 6, 7, 8}; // CHANGE TO ARDUINO PINS USED FOR THE SEGMENT PINS GOING FROM SEGMENT A-G
   bool resistorsOnSegments = false; // 'false' means resistors are on digit pins
   byte hardwareConfig = COMMON_CATHODE; // See README.md for options
   bool updateWithDelays = false; // Default 'false' is Recommended
@@ -80,14 +82,14 @@ void loop() {
       {
         first_x = false;
         last_time = start_time;
-        DP <= 0 ? DP = 3 : DP--;
+        DP <= 0 ? DP = digit_pin_count - 1 : DP--;
       }
       else
       {
         if(start_time - last_time >= 750) // If the joystick is still held rightward, the decimal moves rightward every second
         {
           last_time = start_time;
-          DP <= 0 ? DP = 3 : DP--;
+          DP <= 0 ? DP = digit_pin_count - 1 : DP--;
         }
       }
     }
@@ -98,14 +100,14 @@ void loop() {
       {
         first_x = false;
         last_time = start_time;
-        DP >= 3 ? DP = 0 : DP++;
+        DP >= digit_pin_count - 1 ? DP = 0 : DP++;
       }
       else
       {
         if(start_time - last_time >= 750) // If the joystick is still held leftward, the decimal moves leftward every second
         {
           last_time = start_time;
-          DP >= 3 ? DP = 0 : DP++;
+          DP >= digit_pin_count - 1 ? DP = 0 : DP++;
         }
       }
     }
