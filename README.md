@@ -10,5 +10,7 @@ This program enables manual modification of any digit(s) displayed while using a
 0.0.0.0·           --->           0.0.0.1·           --->              0·0.0.1.           --->             9·0.0.1.                     
           Moving joystick upward            Moving joystick rightward            Moving joystick downward
 ```
+### Wiring Diagram
+![Screenshot of wiring physically done](images/Wiring_Diagram-Joystick_4_Digit_Segment_Display.png)
 ### Credit
 The [SevSeg](https://github.com/untr0py/SevSeg) library by Dean Reading
